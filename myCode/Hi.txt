@@ -1,0 +1,47 @@
+
+          0  1  2  3  4  5
+
+prices = {7, 1, 5, 3, 6, 4}
+
+maxP = 0;
+miniBuy = 7;
+
+----first iteration i=0
+miniBuy=7;
+maxP=0;
+
+----second iteration i=1
+miniBuy = 1;
+maxP = 0;
+
+----third iteration i=3
+miniBuy = 1;
+maxp = 4;
+
+----fourth iteration i=4
+miniBuy = 1;
+maxp = 2;
+
+----fifth iteration i=5
+miniBuy = 1;
+maxp = 5;
+
+----sixth iteration i=6
+miniBuy = 1;
+maxp = 5;
+
+
+
+
+
+
+
+
+
+
+
+
+
+best time to buy and sell
+bruteforce
+optimal : two variable : after iteration valuess
