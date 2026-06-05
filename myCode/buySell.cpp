@@ -17,7 +17,6 @@ public:
             maxP = max(maxP, profit);
             minBuy = min(minBuy, sell);
         }
-
         return maxP;
     }
 };
