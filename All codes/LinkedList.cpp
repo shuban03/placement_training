@@ -32,6 +32,15 @@ class LinkedList{
         }
         temp->next = newNode;
     }
+    void deleteFront(){
+        if(head == NULL){
+            cout << "List is empty" << endl;
+            return;
+        }
+        Node* temp = head;
+        head = head->next;
+        delete temp;
+    }
 
     void display(){
         Node* temp = head;
@@ -41,4 +50,28 @@ class LinkedList{
         }
         cout << endl;
     }
+   
 };
+class DoublyLinkedList{
+    public:
+    int data;
+    Node* head;
+    Node* tail;
+
+};
+
+int main(){
+    LinkedList list;
+    list.insertAtEnd(10);
+    list.insertAtEnd(20);
+    list.insertAtEnd(30);
+
+    list.display();
+    list.deleteFront();
+    list.display();
+
+
+    return 0;
+}
+
+
