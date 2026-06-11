@@ -16,16 +16,15 @@ public:
         right = nullptr;
     }
 
-    void preorderTraversal(TreeNode* root)
+    void preorderTraversal(TreeNode *root)
     {
         if (root == nullptr)
             return;
         cout << root->data << " ";
         preorderTraversal(root->left);
         preorderTraversal(root->right);
-        
     }
-    void postOrderTraversal(TreeNode* root)
+    void postOrderTraversal(TreeNode *root)
     {
         if (root == nullptr)
             return;
@@ -33,22 +32,25 @@ public:
         postOrderTraversal(root->right);
         cout << root->data << " ";
     }
-    void inOrderTraversal(TreeNode* root)
+    void inOrderTraversal(TreeNode *root)
     {
-        if (root == nullptr) return;
+        if (root == nullptr)
+            return;
         inOrderTraversal(root->left);
         cout << root->data << " ";
         inOrderTraversal(root->right);
-    }         
-    
-    void bfs(TreeNode* root)
+    }
+
+    void bfs(TreeNode *root)
     {
-        if (root == nullptr) return;
-        queue<TreeNode*> q;
+        if (root == nullptr)
+            return;
+        queue<TreeNode *> q;
         q.push(root);
         while (!q.empty())
         {
-            TreeNode* current = q.front();
+            // print current node and add its children to the queue
+            TreeNode *current = q.front();
             q.pop();
             cout << current->data << " ";
             if (current->left != nullptr)
@@ -61,23 +63,23 @@ public:
 
 int main()
 {
-    TreeNode* root = new TreeNode(1);
+    TreeNode *root = new TreeNode(1);
     root->left = new TreeNode(2);
     root->right = new TreeNode(3);
     root->left->left = new TreeNode(4);
     root->left->right = new TreeNode(5);
-    cout<<"Preorder Traversal: "<<endl;
+    cout << "Preorder Traversal: " << endl;
     root->preorderTraversal(root);
-    cout<<endl;
-    cout<<"Postorder Traversal: "<<endl;
+    cout << endl;
+    cout << "Postorder Traversal: " << endl;
     root->postOrderTraversal(root);
-    cout<<endl;
-    cout<<"Inorder Traversal: "<<endl;
+    cout << endl;
+    cout << "Inorder Traversal: " << endl;
     root->inOrderTraversal(root);
-    cout<<endl;
-    cout<<"Level-order Traversal: "<<endl;
+    cout << endl;
+    cout << "Level-order Traversal: " << endl;
     root->bfs(root);
-    cout<<endl;
+    cout << endl;
 
     return 0;
 }
